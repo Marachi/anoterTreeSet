@@ -9,42 +9,42 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        MyTreeSet tree = new MyTreeSet();
-        tree.add(Integer.valueOf(7));
-        tree.add(Integer.valueOf(2));
-        tree.add(Integer.valueOf(11));
-        tree.add(Integer.valueOf(1));
-        tree.add(Integer.valueOf(6));
-        tree.add(Integer.valueOf(9));
-        tree.add(Integer.valueOf(14));
-        tree.add(Integer.valueOf(4));
-        tree.add(Integer.valueOf(10));
-        tree.add(Integer.valueOf(12));
-        tree.add(Integer.valueOf(3));
-        tree.add(Integer.valueOf(5));
-        Iterator i$ = tree.iterator();
+        AnotherTreeSet anotherTreeSet = new AnotherTreeSet();
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
+        anotherTreeSet.add(Math.random()*100);
 
-        Integer node;
-        while(i$.hasNext()) {
-            node = (Integer)i$.next();
-            System.out.println(node);
+        Iterator iterator = anotherTreeSet.iterator();
+
+        Integer i;
+        while(iterator.hasNext()) {
+            i = (Integer) iterator.next();
+            System.out.println(i);
         }
 
-        tree.remove(Integer.valueOf(11));
+        anotherTreeSet.remove(1);
         System.out.println("New");
-        i$ = tree.iterator();
+        iterator = anotherTreeSet.iterator();
 
-        while(i$.hasNext()) {
-            node = (Integer)i$.next();
-            System.out.println(node);
+        while(iterator.hasNext()) {
+            i = (Integer)iterator.next();
+            System.out.println(i);
         }
 
-        tree.remove(Integer.valueOf(12));
-        i$ = tree.iterator();
+        anotherTreeSet.remove(Integer.valueOf(12));
+        iterator = anotherTreeSet.iterator();
 
-        while(i$.hasNext()) {
-            node = (Integer)i$.next();
-            System.out.println(node);
+        while(iterator.hasNext()) {
+            i = (Integer)iterator.next();
+            System.out.println(i);
         }
 
     }
